@@ -25,8 +25,8 @@ module.exports = class AnimeChanService {
     return new URLSearchParams(params).toString();
   }
 
-  getQuotes(filterParams) {
-    const filterParams = this.buildFilterParams(filterParams);
+  getQuotes(params) {
+    const filterParams = this.buildFilterParams(params);
 
     return this.httpClient.get(
       `https://animechan.vercel.app/api/quotes/anime${
