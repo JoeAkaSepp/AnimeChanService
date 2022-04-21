@@ -34,4 +34,10 @@ module.exports = class AnimeChanService {
       }`
     );
   }
+
+  getRandomQuotes() {
+    return this.httpClient.get(
+      'https://animechan.vercel.app/api/quotes'
+    );
+  }
 };
